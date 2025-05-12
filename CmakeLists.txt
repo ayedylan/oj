@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.10)
+project(vsttest VERSION 0.0.1)
+add_subdirectory(JUCE)
+juce_add_plugin(vsttest
+	FORMATS VST3 STANDALONE)
+target_sources( ${PROJECT_NAME} PRIVATE
+    src/PluginEditor.cc
+    src/PluginEditor.h
+    src/PluginProcessor.cc
+    src/PluginProcessor.h
+)
